@@ -1,0 +1,136 @@
+/*
+@mixin responsive($device) {
+    @if $device == "mobile" {
+        @media screen and (min-width: $mobile-m) {
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    } @else if $device == "desktop" {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+*/
+.contact {
+  background-color: #ffcb0f;
+}
+
+.contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 74px;
+}
+
+@media screen and (max-width: 767px) {
+  .contact .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contact h2 {
+  width: 50%;
+  margin: 0;
+}
+
+.contact h2 span {
+  display: block;
+  font-family: font36360;
+  font-size: 4.02rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contact h2 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .contact h2 span {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .contact h2 span {
+    font-size: 2rem;
+  }
+}
+
+.contact form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .contact form {
+    width: 100%;
+  }
+}
+
+.contact form input {
+  display: block;
+  padding: 16px 21px;
+  outline: none;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact form input[name="name"] {
+  width: calc(50% - 10px);
+  margin-bottom: 13px;
+  margin-right: 20px;
+}
+
+.contact form input[name="email"] {
+  margin-bottom: 13px;
+  width: calc(50% - 10px);
+}
+
+.contact form input[name="message"] {
+  width: calc(70% - 10px);
+  margin-right: 20px;
+}
+
+.contact form input[type="submit"] {
+  width: calc(30% - 10px);
+  background-color: #484848;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.contact form input[type="submit"]:hover {
+  background-color: #222533;
+}
+
+@media screen and (max-width: 424px) {
+  .contact form input[id] {
+    width: 100%;
+    margin: 0 0 13px;
+  }
+  .contact form input[type="submit"] {
+    width: 100%;
+    margin: 0;
+  }
+}

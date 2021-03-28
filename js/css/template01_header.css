@@ -1,0 +1,207 @@
+/*
+@mixin responsive($device) {
+    @if $device == "mobile" {
+        @media screen and (min-width: $mobile-m) {
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    } @else if $device == "desktop" {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+*/
+main {
+  margin-top: 136px;
+}
+
+@media screen and (min-width: 745px) and (max-width: 845px) {
+  main {
+    margin-top: 161px;
+  }
+}
+
+/* header */
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+header .header-top {
+  color: #222222;
+  background-color: #ffcb0f;
+}
+
+header .header-top .container {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 845px) {
+  header .header-top .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .header-top .container .info-column {
+    margin-bottom: 10px;
+  }
+  header .header-top .container .info-column span:last-child {
+    margin-right: 0;
+  }
+}
+
+header .header-top .info-column span {
+  margin-right: 33px;
+}
+
+header .header-top .info-column span i {
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 745px) {
+  header .header-top .info-column {
+    display: none;
+  }
+}
+
+header .header-top .sns-column a {
+  margin-left: 10px;
+  font-size: 2rem;
+}
+
+header .header-bottom {
+  background-color: #222533;
+  color: #fff;
+}
+
+header .header-bottom .container {
+  padding: 23px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-bottom h1 a {
+  width: 200px;
+}
+
+header .header-bottom h1 a img {
+  width: 100%;
+}
+
+header .header-bottom .mo-info {
+  display: none;
+  background-color: #ffcb0f;
+}
+
+header .header-bottom .mo-info i {
+  margin-right: 12px;
+}
+
+header .header-bottom .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: capitalize;
+}
+
+header .header-bottom .gnb li a {
+  margin-left: 30px;
+}
+
+header .header-bottom .gnb li:last-child {
+  color: #ffcb0f;
+  font-size: 2rem;
+}
+
+header .header-bottom .close-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 3rem;
+  color: #222533;
+}
+
+header .header-bottom .mo-menu-trigger {
+  display: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 745px) {
+  header .header-bottom nav {
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+  }
+  header .header-bottom nav.active {
+    width: 100%;
+  }
+  header .header-bottom nav .mo-info {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    height: 125px;
+  }
+  header .header-bottom nav .mo-info a {
+    padding: 10px 0;
+  }
+  header .header-bottom nav .gnb {
+    background-color: #222533;
+    position: absolute;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    height: calc(100% - 125px);
+    bottom: 0;
+  }
+  header .header-bottom nav .gnb a {
+    margin-left: 0;
+    padding: 20px 0;
+  }
+  header .header-bottom nav .gnb a:hover {
+    background-color: #484848;
+  }
+  header .header-bottom .mo-info,
+  header .header-bottom .close-btn,
+  header .header-bottom .mo-menu-trigger {
+    display: block;
+  }
+}

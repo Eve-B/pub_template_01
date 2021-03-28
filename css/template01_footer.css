@@ -1,0 +1,226 @@
+footer {
+  color: #fff;
+  background-color: rgba(22, 24, 34, 0.9);
+  position: relative;
+}
+footer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent url("../img/bg_footer.png") no-repeat center top;
+  background-size: cover;
+  opacity: 0.9;
+  z-index: -1;
+}
+footer .footer-nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1064px) {
+  footer .footer-nav .container {
+    flex-wrap: wrap;
+  }
+  footer .footer-nav .container .column {
+    width: 100%;
+  }
+  footer .footer-nav .container .column ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .footer-nav .container .column:nth-child(2),
+footer .footer-nav .container .column:nth-child(3),
+footer .footer-nav .container .column:nth-child(4) {
+    font-size: 1.4rem;
+  }
+}
+footer .footer-nav h2 {
+  display: none;
+}
+footer .footer-nav .column h3 {
+  font-size: 2.5rem;
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 1064px) {
+  footer .footer-nav .column h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+footer .about_company {
+  width: 25%;
+}
+footer .about_company p {
+  line-height: 1.6;
+  margin: 29px 0 41px;
+  word-break: break-all;
+}
+@media screen and (max-width: 1064px) {
+  footer .about_company p {
+    margin: 20px 0 10px;
+  }
+}
+footer .about_company ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .about_company ul li a {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #ffcb0f;
+  text-align: center;
+  line-height: 44px;
+  color: #222222;
+  font-size: 2rem;
+}
+footer .about_company ul li:last-child a {
+  margin-right: 0;
+}
+@media screen and (max-width: 1064px) {
+  footer .about_company ul {
+    justify-content: start;
+  }
+  footer .about_company ul li a {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 1064px) {
+  footer .about_company {
+    align-items: center;
+    text-align: center;
+  }
+}
+footer .explor_linlk {
+  width: 15%;
+}
+footer .explor_linlk li a {
+  margin-bottom: 17px;
+}
+footer .explor_linlk li a:hover {
+  text-decoration: underline;
+}
+footer .explor_linlk li a i {
+  margin-right: 20px;
+}
+@media screen and (max-width: 1064px) {
+  footer .explor_linlk ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .explor_linlk ul a {
+    margin-right: 15px;
+  }
+  footer .explor_linlk ul a i {
+    margin-right: 5px;
+  }
+}
+footer .latest_post {
+  width: 25%;
+}
+footer .latest_post li {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1064px) {
+  footer .latest_post li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 939px) {
+  footer .latest_post li {
+    width: 33%;
+  }
+  footer .latest_post li:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 715px) {
+  footer .latest_post li {
+    width: 50%;
+  }
+  footer .latest_post li:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 490px) {
+  footer .latest_post li {
+    width: 100%;
+  }
+  footer .latest_post li:nth-child(2) {
+    display: none;
+  }
+}
+footer .latest_post li a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+footer .latest_post li a:hover .text {
+  text-decoration: underline;
+}
+footer .latest_post .date-box {
+  flex-shrink: 0;
+  border: 2px solid;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 15px;
+  width: 53px;
+  height: 53px;
+  border-radius: 26.5px;
+}
+footer .latest_post .date-box .date {
+  font-size: 2rem;
+}
+footer .latest_post .date-box .month {
+  font-size: 1.2rem;
+}
+footer .contact_us {
+  width: 20%;
+}
+footer .contact_us li {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+footer .contact_us li a span:last-child {
+  display: block;
+  margin-left: 35px;
+}
+footer .contact_us li i {
+  margin-right: 23px;
+}
+@media screen and (max-width: 1064px) {
+  footer .contact_us li {
+    margin-bottom: 10px;
+  }
+  footer .contact_us li a {
+    margin-right: 15px;
+    font-size: 1.3rem;
+  }
+  footer .contact_us li a span:last-child {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  footer .contact_us li i {
+    margin-right: 5px;
+  }
+}
+footer .footer-bottom {
+  text-align: center;
+  background-color: #1a1c27;
+}
+footer .footer-bottom .container {
+  padding: 38px 15px;
+}
+footer .footer-bottom .container span span {
+  color: #ffcb0f;
+}
+
+/*# sourceMappingURL=template01_footer.css.map */

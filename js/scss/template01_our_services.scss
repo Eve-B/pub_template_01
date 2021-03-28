@@ -1,0 +1,72 @@
+@import "_template01_variables";
+@import "_template01_mixins";
+
+//#our_service
+.our_services {
+    .container {
+        padding-bottom: 74px;
+
+        .column {
+            display: flex;
+            justify-content: space-between;
+            // margin-bottom: 99px;
+            @include responsive(767px) {
+                flex-wrap: wrap;
+            }
+
+            .services-item {
+                display: flex;
+                // border: 1px solid red;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30%;
+
+                img {
+                    width: 100%;
+                }
+                h3 {
+                    text-transform: uppercase;
+                    font-family: $Futura_LT_Bold;
+
+                    font-size: 2rem;
+                    margin: 32px 0 30px;
+                }
+
+                p {
+                    line-height: 1.6;
+                    word-break: break-all;
+                    @include responsive(767px) {
+                        word-break: initial;
+                    }
+                }
+
+                .btn {
+                    margin-top: 35px;
+                }
+
+                @include responsive(1125px) {
+                    width: 32%;
+                }
+                @include responsive(767px) {
+                    width: 100%;
+                    align-items: center;
+                    h3 {
+                        margin: 15px;
+                        font-size: 1.8rem;
+                    }
+                    img {
+                        width: 50%;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+
+                    .btn {
+                        margin: 15px 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}

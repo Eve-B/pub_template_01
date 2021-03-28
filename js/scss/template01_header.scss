@@ -1,0 +1,173 @@
+@import "_template01_variables";
+@import "_template01_mixins";
+
+main {
+    margin-top: 136px;
+    @media screen and (min-width: 745px) and (max-width: 845px) {
+        margin-top: 161px;
+    }
+}
+
+/* header */
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .header-top {
+        color: #222222;
+        background-color: $main;
+
+        .container {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include responsive(845px) {
+                display: flex;
+                flex-direction: column;
+                .info-column {
+                    margin-bottom: 10px;
+                    span:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .column {
+        }
+        .info-column {
+            span {
+                margin-right: 33px;
+                i {
+                    margin-right: 12px;
+                }
+            }
+            @include responsive(745px) {
+                display: none;
+            }
+        }
+        .sns-column {
+            a {
+                margin-left: 10px;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .header-bottom {
+        background-color: $header;
+        color: #fff;
+
+        .container {
+            padding: 23px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ///
+        h1 {
+            a {
+                width: 200px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .mo-info {
+            display: none;
+            background-color: $main;
+            i {
+                margin-right: 12px;
+            }
+        }
+        .gnb {
+            display: flex;
+
+            text-transform: capitalize;
+
+            li {
+                a {
+                    margin-left: 30px;
+                }
+
+                &:last-child {
+                    color: $main;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .close-btn {
+            display: none;
+            position: absolute;
+            $w: 20px;
+            top: $w;
+            left: $w;
+            font-size: 3rem;
+            color: $header;
+        }
+
+        .mo-menu-trigger {
+            display: none;
+            font-size: 2rem;
+            padding: 10px 15px;
+        }
+
+        @include responsive(745px) {
+            nav {
+                width: 0px;
+                // width: 10px;
+                height: 100vh;
+
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 100;
+
+                background-color: rgba(255, 255, 255, 0.85);
+                text-align: center;
+                transition: width 0.5s;
+
+                &.active {
+                    width: 100%;
+                }
+
+                .mo-info {
+                    width: 80%;
+                    position: absolute;
+                    right: 0;
+                    height: 125px;
+                    a {
+                        padding: 10px 0;
+                    }
+                }
+                .gnb {
+                    background-color: $header;
+
+                    position: absolute;
+                    right: 0;
+                    flex-direction: column;
+                    width: 80%;
+                    // border: 1px solid blue;
+                    height: calc(100% - 125px);
+                    bottom: 0;
+                    a {
+                        margin-left: 0;
+                        padding: 20px 0;
+                        &:hover {
+                            background-color: $gray;
+                        }
+                    }
+                }
+            }
+            .mo-info,
+            .close-btn,
+            .mo-menu-trigger {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/*
+@mixin responsive($device) {
+    @if $device == "mobile" {
+        @media screen and (min-width: $mobile-m) {
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    } @else if $device == "desktop" {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+*/
+@mixin bg($bg) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // @if type-of($bg) == "color" {
+    // background-color: $bg;
+    // } @else {
+    background: transparent url($bg) no-repeat center top;
+    // }
+}
+
+@mixin responsive($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin make_circle($width) {
+    width: #{$width}px;
+    height: #{$width}px;
+    border-radius: #{$width/2}px;
+}

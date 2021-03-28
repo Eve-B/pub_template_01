@@ -1,0 +1,125 @@
+@import "_template01_variables";
+@import "_template01_mixins";
+
+//#welcome
+.welcome {
+    .container {
+        padding: 74px 15px 15px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    h2 {
+        margin: 0 0 37px;
+        width: 100%;
+        text-align: left;
+        color: $main;
+        font-size: 4.07rem;
+        span {
+            display: block;
+            text-transform: initial;
+            color: $gray;
+            font-size: 3rem;
+        }
+        @include responsive(662px) {
+            font-size: 3rem;
+            span {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .paragraph {
+        width: 54%;
+        p {
+            line-height: 1.2;
+            word-break: break-all;
+            &:nth-of-type(1) {
+                margin-bottom: 20px;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 40px;
+            }
+        }
+        .btn {
+            margin: 0 auto;
+        }
+    }
+
+    .img-box {
+        width: 40%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+
+        &::before {
+            @include bg("../img/bg_welcome.png");
+            background-position: center;
+            filter: blur(5px);
+            z-index: -5;
+        }
+    }
+    @include responsive(1080px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        text-align: center;
+        h2 {
+            text-align: center;
+        }
+        .paragraph {
+            width: 58%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .img-box {
+            position: relative;
+            img {
+                width: 70%;
+                max-width: 258px;
+                height: auto;
+            }
+        }
+    }
+
+    @include responsive(662px) {
+        .welcome .container h2 {
+            font-size: 1rem;
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+    @include responsive(596px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .paragraph {
+            width: 100%;
+            p {
+                &:nth-of-type(2) {
+                    margin-bottom: 20px;
+                }
+            }
+            .btn {
+                margin-bottom: 20px;
+            }
+        }
+
+        .img-box {
+            width: 100%;
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

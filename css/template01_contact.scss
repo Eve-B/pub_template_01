@@ -1,0 +1,102 @@
+@import "_template01_variables";
+@import "_template01_mixins";
+
+//#contact
+.contact {
+    background-color: $main;
+    .container {
+        display: flex;
+        align-items: center;
+        padding-bottom: 74px;
+
+        @include responsive(767px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.contact {
+    h2 {
+        width: 50%;
+        margin: 0;
+
+        span {
+            display: block;
+            font-family: $Futura_LT_Book;
+            font-size: 4.02rem;
+        }
+
+        @include responsive(767px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        @include responsive(564px) {
+            font-size: 2rem;
+
+            span {
+                font-size: 2.7rem;
+            }
+        }
+
+        @include responsive(376px) {
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    form {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        @include responsive(767px) {
+            width: 100%;
+        }
+
+        input {
+            display: block;
+            padding: 16px 21px;
+            outline: none;
+            font-family: inherit;
+            border: none;
+            border-radius: 8px;
+            &[name="name"] {
+                width: calc(50% - 10px);
+                margin-bottom: 13px;
+                margin-right: 20px;
+            }
+            &[name="email"] {
+                margin-bottom: 13px;
+                width: calc(50% - 10px);
+            }
+            &[name="message"] {
+                width: calc(70% - 10px);
+                margin-right: 20px;
+            }
+
+            &[type="submit"] {
+                width: calc(30% - 10px);
+                background-color: $gray;
+                text-transform: uppercase;
+                color: #fff;
+                cursor: pointer;
+                font-size: 1.6rem;
+                &:hover {
+                    background-color: $header;
+                }
+            }
+
+            @include responsive(424px) {
+                &[id] {
+                    width: 100%;
+                    margin: 0 0 13px;
+                }
+                &[type="submit"] {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

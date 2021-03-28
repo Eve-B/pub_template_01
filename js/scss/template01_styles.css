@@ -1,0 +1,99 @@
+/*
+@mixin responsive($device) {
+    @if $device == "mobile" {
+        @media screen and (min-width: $mobile-m) {
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    } @else if $device == "desktop" {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+*/
+@import url("https://www.fontify.me/wf/0f47d8a04da4ab992fa104136c7b4c74");
+@import url("https://www.fontify.me/wf/bdea1cbdb7d62de9d10d2c641f70e1b1");
+@import url("https://www.fontify.me/wf/be711d8eace6d2f63c44355289ab032d");
+body {
+  font-family: font36358;
+}
+
+body {
+  font-family: font36359;
+}
+
+body {
+  font-family: font94238;
+}
+
+body {
+  font-family: font36360;
+}
+
+/* common */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  color: #484848;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 74px 15px 0;
+  margin: 0 auto;
+}
+
+.blind {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.btn {
+  background-color: #ffcb0f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  width: 157px;
+  padding: 16px 0;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.btn:hover {
+  background-color: #484848;
+  color: #ffcb0f;
+}
+
+h2 {
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  color: #484848;
+  font-family: font36358;
+  font-size: 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=template01_styles.css.map */

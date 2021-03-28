@@ -1,0 +1,123 @@
+/*
+@mixin responsive($device) {
+    @if $device == "mobile" {
+        @media screen and (min-width: $mobile-m) {
+            @content;
+        }
+    } @else if $device == "tablet" {
+        @media screen and (min-width: $tablet) {
+            @content;
+        }
+    } @else if $device == "desktop" {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+*/
+.why_choose_us {
+  background-color: #f2f7fa;
+}
+
+.why_choose_us .container {
+  text-align: center;
+  padding-bottom: 74px;
+  padding-bottom: 65px;
+}
+
+.why_choose_us p {
+  line-height: 1.2;
+}
+
+.why_choose_us .column {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.why_choose_us .column .us-item {
+  width: 20%;
+}
+
+.why_choose_us .column .us-item .bg-box {
+  font-size: 5rem;
+  background: transparent url(../img/bg_elips.png) no-repeat center/contain;
+  width: 100%;
+  max-width: 179px;
+  height: 179px;
+  line-height: 179px;
+}
+
+@media screen and (max-width: 583px) {
+  .why_choose_us .column .us-item .bg-box {
+    max-width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 2.5rem;
+  }
+}
+
+.why_choose_us .column .us-item h3 {
+  text-transform: uppercase;
+  font-family: font36358;
+  margin: 17px 0 25px;
+}
+
+@media screen and (max-width: 583px) {
+  .why_choose_us .column .us-item h3 {
+    text-align: left;
+    margin: 0 0 5px 15px;
+  }
+}
+
+.why_choose_us .column .us-item span {
+  display: block;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 767px) {
+  .why_choose_us .column .us-item span {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .why_choose_us .column .us-item span {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    word-break: break-all;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .why_choose_us .column .us-item {
+    width: calc(50% - 15px);
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .why_choose_us .column .us-item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .why_choose_us .column {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .why_choose_us .column .bg-box {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,96 @@
+@import "_template01_variables";
+@import "_template01_mixins";
+
+//#why_choose_us
+.why_choose_us {
+    background-color: #f2f7fa;
+
+    .container {
+        text-align: center;
+        padding-bottom: 74px;
+        padding-bottom: 65px;
+    }
+
+    h2 {
+    }
+
+    p {
+        line-height: 1.2;
+    }
+
+    .column {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+
+        .us-item {
+            width: 20%;
+            // border: 1px solid blue;
+
+            .bg-box {
+                font-size: 5rem;
+                background: transparent url(../img/bg_elips.png) no-repeat center / contain;
+                width: 100%;
+                $w: 179px;
+                max-width: $w;
+                height: $w;
+                line-height: $w;
+
+                @include responsive(583px) {
+                    $w: 70px;
+                    max-width: $w;
+                    height: $w;
+                    line-height: $w;
+
+                    font-size: 2.5rem;
+                }
+            }
+
+            h3 {
+                text-transform: uppercase;
+
+                font-family: $Futura_LT_Bold;
+                margin: 17px 0 25px;
+                @include responsive(583px) {
+                    text-align: left;
+                    margin: 0 0 5px 15px;
+                }
+            }
+            span {
+                display: block;
+                line-height: 1.2;
+                @include responsive(767px) {
+                    padding-bottom: 30px;
+                }
+                @include responsive(583px) {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+                    text-align: left;
+                    word-break: break-all;
+                }
+            }
+
+            //.us-item
+
+            @include responsive(767px) {
+                width: calc(50% - 15px);
+                margin-bottom: 15px;
+            }
+            @include responsive(583px) {
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                & > * {
+                    // border: 1px solid salmon;
+                }
+            }
+        }
+        @include responsive(767px) {
+            flex-wrap: wrap;
+            .bg-box {
+                margin: 0 auto;
+            }
+        }
+    }
+}
